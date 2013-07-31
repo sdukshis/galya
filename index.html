@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Эмулятор GaLyA</title>
+		<script src="js/galya.js"></script>
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+	<body onload="init();" onkeydown="onKeyPress(event);"> 
+		<h1>GaLyA</h1>
+		<div class="control">
+			<input value="reset" onclick="start();" type="submit">
+			<input value="step" onclick="doStep();" type="submit">
+			<input value="run" onclick="run();" type="submit">
+			<input value="stop" onclick="stop();" type="submit">
+            <select id="freq">
+                <option selected="selected" value="1">1 Hz</option>
+                <option value="2">2 Hz</option>
+                <option value="5">5 Hz</option>
+                <option value="10">10 Hz</option>
+                <option value="100">100 Hz</option>
+            </select>
+		</div>
+		<div>
+			<div class="cpu">
+				<h2>CPU</h2>
+				<canvas id="cpu" width="160px" height="600px"></canvas>
+			</div>
+			<div class="ram">
+				<h2>RAM</h2>
+				<canvas id="ram" width="550px" height="600px"></canvas>
+			</div>
+		</div>
+	</body>
+</html>

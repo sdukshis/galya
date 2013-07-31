@@ -1,0 +1,26 @@
+body{
+    width:800px;
+    margin:auto;
+}
+body h1{
+    text-align:center;
+}
+div{
+    border: 1px white solid;
+}
+.ram{
+    margin-left: 260px;
+}
+.ram h2, .cpu h2{
+    text-align: center;
+}
+.cpu{
+    float: left;
+}
+canvas#cpu, canvas#ram{
+    border: 1px black solid;
+    padding:0px;
+}
+.control{
+    text-align:center;
+}
