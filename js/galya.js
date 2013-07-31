@@ -134,35 +134,43 @@ function step(){
     if(IP > 255) IP = 0;
 }
 function add(fst, snd){
-        res = fst + snd;
-        CARRY = (res > 255)? 1 : 0;
-        res %= 256;
-        ZERO = (res == 0)? 1 : 0;
-        
-        return res;
+    res = fst + snd;
+    CARRY = (res > 255)? 1 : 0;
+    res %= 256;
+    ZERO = (res == 0)? 1 : 0;
+    
+    return res;
 }
 
 function sub(fst, snd){
-        res = fst - snd;
-        CARRY = (res >= 0)? 1 : 0;
-        if(res < 0) {
-            res += 256;
-        }
-        ZERO = (res == 0)? 1 : 0;
+    res = fst - snd;
+    CARRY = (res >= 0)? 1 : 0;
+    if(res < 0) {
+        res += 256;
+    }
+    ZERO = (res == 0)? 1 : 0;
 
-        return res;
+    return res;
 }
 
 function mul(fst, snd){
-        return fst*snd;
+    res = fst*snd;
+    CARRY = (res > 255)? 1 : 0;
+    res %= 256;
+    ZERO = (res == 0)? 1 : 0;
+    return res;
 }
 
 function mdiv(fst, snd){
-        return (fst - fst%snd)/snd;
+    res = (fst - fst%snd)/snd;
+    ZERO = (res == 0)? 1 : 0;
+    return res;
 }
 
 function mod(fst, snd){
-        return fst%snd;
+    res = fst%snd;
+    ZERO = (res == 0)? 1 : 0;
+    return res;
 }
 
 
